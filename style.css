@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  margin: 0;
+  box-sizing: border-box;
+  padding:8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navmainmenu {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 64px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.menuoptions {
+color: aliceblue;
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menuoptions a {
+  color: white;
+  margin: 16px;
+  font-weight: bold;
+}
+
+.sing-button{
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  background-color: #0a2540;
+  color: #fff;
+  padding: 8px 16px;
+  transition: all 0.15s ease;
+  background:rgba(250, 250, 250, 0.25);
+}
+.sing-button:hover {
+  background-color: #210342;
+  cursor: pointer;
+}
+
+#fondo-cabecera {
+  width: 200%;
+  height: 970px;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: -600px;
+  left: -50%;
+  z-index: -1;
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #ffba27;
+}
+
+h1 {
+  font-family: "Anek Telugu", sans-serif;;
+  font-weight: 600;
+  font-size: 94px;
+  margin: 0;
+  width: 100%;
+  letter-spacing: -1px;
+  line-height:75px;
+}
