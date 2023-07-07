@@ -1,42 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #000;
   margin: 0;
-  box-sizing: border-box;
-  padding:8px;
+  padding:16px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content:center;
+  overflow-x: hidden;
+  /* max-width: 1144px; */
 }
 
-.navmainmenu {
-  background-color: blueviolet;
+.navegacion {
+  /* background-color: rgb(15, 161, 161); */
+  width: 1144px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  align-content:center;
   padding: 16px;
-  margin: 64px;
-  box-sizing: border-box;
+  margin-bottom:64px;
   width: 100%;
 }
 
-.menuoptions {
+.opciones-menu {
 color: aliceblue;
 list-style: none;
 display: flex;
-justify-content: center;
-align-items: center;
+/* justify-content: center;
+align-items: center; */
 }
 
-.menuoptions a {
+.opciones-menu a {
   color: white;
   margin: 16px;
   font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  background-color: #0a2540;
+  color: #fff;
+  padding: 8px 16px;
+  transition: all 0.15s ease;
+  background:rgba(250, 250, 250, 0.25);
+  text-decoration: none;
 }
 
-.sing-button{
+.opciones-menu a:hover {
+  background-color: #210342;
+  cursor: pointer;
+}
+
+.menu-hamburguesa {
+    width: 50px;
+    height: 30px;
+    background-color: rgba(250, 250, 250, 0.25);
+    border-radius: var(--standard-border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.menu-hamburguesa .barra {
+  width: 18px;
+  height: 2px;
+  background-color: white;
+  margin: 1px 0;
+}
+
+.boton-inicio {
   font-family: "Roboto", sans-serif;
   font-size: 16px;;
   letter-spacing: 1.25px;
@@ -49,12 +90,12 @@ align-items: center;
   transition: all 0.15s ease;
   background:rgba(250, 250, 250, 0.25);
 }
-.sing-button:hover {
+.boton-inicio:hover {
   background-color: #210342;
   cursor: pointer;
 }
 
-#fondo-cabecera {
+#fondo-principal {
   width: 200%;
   height: 970px;
   transform: rotate(-10deg);
@@ -62,18 +103,124 @@ align-items: center;
   top: -600px;
   left: -50%;
   z-index: -1;
-  --gradient-color-1: #ef008f;
-  --gradient-color-2: #6ec3f4;
-  --gradient-color-3: #7038ff;
-  --gradient-color-4: #ffba27;
+  background:rgb(15, 161, 161);
+}
+
+.propuesta-valor {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: flex-start; */
+  /* box-sizing: border-box; */
+}
+
+.contenidos-valor {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 h1 {
   font-family: "Anek Telugu", sans-serif;;
   font-weight: 600;
-  font-size: 94px;
+  font-size: 90px;
   margin: 0;
   width: 100%;
-  letter-spacing: -1px;
-  line-height:75px;
+  letter-spacing: -2px;
+  line-height:100px;
+}
+
+p {
+  margin-top: 64px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 26px;
+}
+
+.contenedor-botones {
+  display: flex;
+  margin-top: 40px;
+}
+
+#boton-comienza {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  background-color: #0a2540;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 10px;
+  transition: all 0.15s ease;
+  background:rgba(117, 92, 226, 0.466);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#boton-comienza:hover {
+  background-color: #210342;
+  cursor: pointer;
+}
+
+#boton-venta {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;;
+  letter-spacing: 1.25px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  background-color: #0a2540;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 10px;
+  transition: all 0.15s ease;
+  background:rgba(117, 92, 226, 0.466);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#boton-venta:hover {
+  background-color: #210342;
+  cursor: pointer;
+}  
+
+.imagen-celular {
+  width: 50%;
+  flex-direction:column;
+  align-items: end;
+  display: flex;
+}
+  
+#celular {
+  height: 550px;
+  overflow: hidden;
+  transition: 0.15s;
+}
+
+#celular:hover {
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
+}
+
+.contenedor-alianzas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aliazas-logos {
+  overflow: hidden;
+  transition: 0.15s;
+}
+.aliazas-logos:hover {
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
 }

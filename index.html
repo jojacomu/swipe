@@ -13,39 +13,58 @@
     <title>Swipe</title>
 </head>
 <body>
-    <!-- Menu de navegación principal -->
-    <nav class="navmainmenu">
+    <!-- Menu de navegación -->
+    <nav class="navegacion">
         <img src="assets/logo-white-swipe.svg" alt="Swipe, inc.">
-            <ul class="menuoptions">
+            <ul class="opciones-menu">
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Soluciones</a></li>
                 <li><a href="#">Desarrolladores</a></li>
                 <li><a href="#">Recursos</a></li>
                 <li><a href="#">Precios</a></li>
             </ul>
-        <div>
-            <div class="hamburguer-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>   
+            <div class="menu-hamburguesa">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>   
         </div>
-        <button class="sing-button">Sign In</button>
+        <button class="boton-inicio">Sign In</button>
         </div>
     </nav>
     <main> 
-        <canvas id="fondocabecera-canvas"></canvas>
-        <div>
-            <h1>Payments infrastructure for the world</h1>
-            <p>Tons of companies all over the world use Swipe’s seamless platform to manage their businesses's entire financial transaction infrastructure online.
-            </p>
-            <div>
-            <button>Start now</button>
-            <button>Contact sales</button>
+        <canvas id="fondo-principal"></canvas>
+        <div class="propuesta-valor">
+            <div class="contenidos-valor">
+                <h1>Infraestructura de pagos para el mundo</h1>
+                <p>Miles de empresas de todo el mundo usan la plataforma integrada Swipe para administrar la infraestructura de transacciones financiera completra de sus negocios en línea.
+                </p>
+                <div class="contenedor-botones">
+                    <button id="boton-comienza">Comienza ya
+                        <img src="assets/arrow-right-light.svg" alt="inicia">
+                    </button>
+                    <button id="boton-venta">Contacto de ventas
+                        <img src="assets/arrow-right-purple.svg" alt="ventas">
+                    </button>
+                </div>
+            </div>        
+            <div class="imagen-celular">
+                <img id="celular" src="assets/hero-phone.png" alt="">
             </div>
-        </div>
+        </div>       
         <div>
-            <img class="hero-phone" src="assets/hero-phone.png" alt="">
-        </div>
+            <div>
+                <div class="contenedor-alianzas">
+                    <img class="aliazas-logos" src="assets/instacart.png" alt="Instacart">
+                    <img class="aliazas-logos" src="assets/salesforce.png" alt="Salesforce">
+                    <img class="aliazas-logos" src="assets/amazon.png" alt="Amazon">
+                    <img class="aliazas-logos" src="assets/slack.png" alt="Slack">
+                    <img class="aliazas-logos" src="assets/shopify.png" alt="Shopify">
+                    <img class="aliazas-logos" src="assets/google.png" alt="Google">
+                    <img class="aliazas-logos" src="assets/lyft.png" alt="Lyft">
+                    <img class="aliazas-logos" src="assets/zoom.png" alt="Zoom">
+                </div>
+            </div>
+        </div>    
     </main>
     </body>
 </html>
