@@ -8,15 +8,16 @@ body {
   font-family: "Roboto", sans-serif;
   color: #000;
   margin: 0;
-  padding:16px;
+  box-sizing: border-box;
+  padding: 16px 0 0 0;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content:center;
+  width: 100%;
+  position: relative;
   overflow-x: hidden;
-  /* max-width: 1144px; */
 }
 
 .navegacion {
@@ -86,7 +87,7 @@ align-items: center; */
   top: -600px;
   left: -50%;
   z-index: -1;
-  background:rgb(1, 8, 114);
+  background: linear-gradient(#ef008f, #6ec3f4, #7038ff, #ffba27);
 }
 
 .propuesta-valor {
@@ -94,6 +95,7 @@ align-items: center; */
   display: flex;
   flex-direction: row;
   justify-content: center;
+  justify-items: center;
   /* align-items: flex-start; */
   /* box-sizing: border-box; */
 }
@@ -103,6 +105,7 @@ align-items: center; */
   display: flex;
   flex-direction: column;
   padding: 20px;
+  justify-items: center;
 }
 
 h1 {
@@ -113,7 +116,7 @@ h1 {
   width: 100%;
   letter-spacing: -2px;
   line-height:100px;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 p {
@@ -136,11 +139,11 @@ p {
   border-radius: 20px;
   border: none;
   background-color: #0a2540;
-  color: #0a1549;
+  color: #ffffff;
   padding: 8px 16px;
   margin: 10px;
   transition: all 0.15s ease;
-  background:rgba(117, 92, 226, 0.466);
+  background:rgba(16, 4, 70);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -160,20 +163,21 @@ p {
   font-weight: bold;
   border-radius: 20px;
   border: none;
-  background-color: #0a2540;
-  color: #fff;
+  /* background-color: #0a2540; */
+  color: #7000ff;
   padding: 8px 16px;
   margin: 10px;
-  transition: all 0.15s ease;
-  background:rgba(117, 92, 226, 0.466);
+  /* transition: all 0.15s ease; */
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border:none;
 }
 
 #boton-venta:hover {
-  background-color: #210342;
+  /* background-color: #210342; */
   cursor: pointer;
   text-decoration: underline;
 }  
@@ -184,7 +188,7 @@ p {
   align-items: end;
   display: flex;
 }
-  
+
 #celular {
   height: 550px;
   overflow: hidden;
@@ -200,11 +204,16 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .aliazas-logos {
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: 0.15s;
+  height: 60px;
 }
 .aliazas-logos:hover {
   -webkit-transform:scale(1.3);
