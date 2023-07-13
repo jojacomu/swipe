@@ -172,93 +172,93 @@ body {
       place-self: center;
   }
 
-/* Media Query para diferentes dispositivo */
+  /* Media Query para diferentes dispositivo */
 /*Pantallas entre 550px y 768px*/
 
 @media (550px <= width <=768px) {
-body {
-    padding: 16px 0 0 0;
-    display: grid;
-    width: 1349px;
-    position: absolute;
-    overflow-x: hidden;
-}
-main {
-    width: 1144px;
-}
-.navegacion {
-    align-content: center;
-        margin: 8px 0px 32px 0px;
-}
+  body {
+      padding: 16px 0 0 0;
+      display: grid;
+      width: 1349px;
+      position: absolute;
+      overflow-x: hidden;
+  }
+  main {
+      width: 1144px;
+  }
+  .navegacion {
+      align-content: center;
+          margin: 8px 0px 32px 0px;
+  }
+  
+  .barra {
+      background: #fff;
+      width: 18px;
+      height: 2px;
+      background-color: white;
+      margin: 1px 0;
+  }
+  
+  #fondo-principal {
+      height: 970px;
+  }
+  
+  .propuesta-valor {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      align-items: flex-start;
+  }
+  .contenidos-valor {
+      width: 50%;
+      padding: 20px;
+      justify-items: center;
+      font-size: medium;
+  }
+  
+  h1 {
+      font-size: 90px;
+      letter-spacing: -2px;
+      line-height: 100px;
+  }
+  
+  p {
+      margin-top: 16px;
+      font-size: 24px;
+      line-height: 34px;
+      max-width: 480px;
+  }
+  
+  .contenedor-botones {
+    margin-top: 40px;
+  }
+  
+  #boton-comienza {
+      margin: 10px;
+      flex-direction: row;
+  }
+  
+  .imagen-celular {
+      width: 50%;
+      flex-direction: column;
+      align-items: end;
+      display: flex;
+  }
+  
+  #celular {
+      height: 550px;
+      overflow: hidden;
+      transition: 0.15s;
+  }
+  
+  .contenedor-alianzas {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  }
+  }
 
-.barra {
-    background: #fff;
-    width: 18px;
-    height: 2px;
-    background-color: white;
-    margin: 1px 0;
-}
-
-#fondo-principal {
-    height: 970px;
-}
-
-.propuesta-valor {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: flex-start;
-}
-.contenidos-valor {
-    width: 50%;
-    padding: 20px;
-    justify-items: center;
-    font-size: medium;
-}
-
-h1 {
-    font-size: 90px;
-    letter-spacing: -2px;
-    line-height: 100px;
-}
-
-p {
-    margin-top: 16px;
-    font-size: 24px;
-    line-height: 34px;
-    max-width: 480px;
-}
-
-.contenedor-botones {
-  margin-top: 40px;
-}
-
-#boton-comienza {
-    margin: 10px;
-    flex-direction: row;
-}
-
-.imagen-celular {
-    width: 50%;
-    flex-direction: column;
-    align-items: end;
-    display: flex;
-}
-
-#celular {
-    height: 550px;
-    overflow: hidden;
-    transition: 0.15s;
-}
-
-.contenedor-alianzas {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-}
-
-/*Pantallas entre 769px y 850px*/
+  /*Pantallas entre 769px y 850px*/
 @media (769px <= width <= 850px) {
 
 .navegacion ul, button {
@@ -327,8 +327,7 @@ p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 }
-
-/* Pantallas mayores a 851px*/
+/* Pantallas mayores a 851px */
 
 @media (851px <= width) {
   body {
@@ -386,6 +385,55 @@ p {
       background-color: #210342;
       cursor: pointer;
     }
+
+    #boton-comienza {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      letter-spacing: 1.25px;
+      font-weight: bold;
+      border-radius: 20px;
+      border: none;
+      color: #ffffff;
+      padding: 8px 16px;
+      margin: 10px;
+      transition: all 0.15s ease;
+      background: #0a2540;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #boton-comienza:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      opacity: 0.75;
+    }
+    
+    #boton-venta {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      letter-spacing: 1.25px;
+      font-weight: bold;
+      border-radius: 20px;
+      border: none;
+      color: #7000ff;
+      padding: 8px 16px;
+      margin: 10px;
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: none;
+    }
+    
+    #boton-venta:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      opacity: 0.75;
+    }
+
     .imagen-celular {
       width: 50%;
       flex-direction: column;
@@ -402,4 +450,4 @@ p {
     .contenedor-alianzas {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  }
+  }  
