@@ -29,8 +29,8 @@ main {
   max-width: 1144px;
   padding: 0 16px;
   margin: 0 0 32px 0;
-  /* box-sizing: border-box; */
 }
+
 .navegacion ul, button {
   display: none;
   }
@@ -44,6 +44,7 @@ main {
   justify-content: center;
   align-items: center;
   }
+
 .menu-hamburguesa .barra {
   background: #fff;
   width: 18px;
@@ -51,6 +52,7 @@ main {
   background-color: white;
   margin: 1px 0;
   }
+
 #fondo-principal {
     width: 200%;
     height: 970px;
@@ -61,6 +63,7 @@ main {
     z-index: -1;
     background: linear-gradient(#ef008f, #6ec3f4, #7038ff, #ffba27);
 }
+
 .propuesta-valor {
   display: flex;
   flex-direction: row;
@@ -71,6 +74,7 @@ main {
   align-items: center;
   padding: 0 0 0 16px;
 }
+
 .contenidos-valor {
   width: 100%;
   box-sizing: border-box;
@@ -80,6 +84,7 @@ main {
   align-items: flex-start;
   justify-content: center;
 }
+
 h1 {
   font-family: "Anek Telugu", sans-serif;
   font-weight: 600;
@@ -89,6 +94,7 @@ h1 {
   letter-spacing: -1px;
   line-height: 65px;
 }
+
 p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -96,10 +102,12 @@ p {
   font-weight: 400;
   margin: 16px 0;
 }
+
 .contenedor-botones {
   display: flex;
   margin: 16px 0;
 }
+
 .boton-comienza{
   font-family: "Roboto", sans-serif;
   letter-spacing: 1.25px;
@@ -144,6 +152,7 @@ p {
     justify-content: center;
     width: 100%;
 }
+
 .contenedor-alianzas {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -151,12 +160,14 @@ p {
   row-gap: 32px;
   width: 100%;
 }
+
 .contenedor-alianzas img {
   width: 100%;
   height: auto;
   place-self: center;
 }
-  /* Media Query para diferentes dispositivo */
+
+/* Media Query para diferentes dispositivo */
 /*Pantallas entre 550px y 768px*/
 
 @media (550px <= width <=768px) {
@@ -167,9 +178,11 @@ body {
     position: absolute;
     overflow-x: hidden;
 }
+
 main {
     width: 1144px;
 }
+
 .navegacion {
     align-content: center;
         margin: 8px 0px 32px 0px;
@@ -267,13 +280,16 @@ p {
   padding: 8px 16px;
   transition: all 0.15s ease;
 }
+
 .opciones-menu a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 .menu-hamburguesa {
   display: none;
 }
+
 .boton-inicio {
   font-family: "Roboto", sans-serif;
   font-size: 16px;;
@@ -287,25 +303,30 @@ p {
   transition: all 0.15s ease;
   background:rgba(250, 250, 250, 0.25);
 }
+
 .boton-inicio:hover {
   background-color: #210342;
   cursor: pointer;
 }
+
 .imagen-celular {
   width: 50%;
   flex-direction: column;
   align-items: end;
   display: flex;
 }
+
 #celular {
   height: 550px;
   overflow: hidden;
   transition: 0.15s;
 }
+
 .contenedor-alianzas {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 }
+
 /* Pantallas mayores a 851px */
 
 @media (851px <= width) {
@@ -389,15 +410,18 @@ h1 {
   letter-spacing: -1px;
   line-height: 85px;
 }
+
 p {
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
   margin: 16px;
 }
+
 .contenedor-botones{
   align-items: center;
 }
+
 #boton-comienza {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -445,12 +469,14 @@ p {
   text-decoration: underline;
   opacity: 0.75;
 }
+
 .imagen-celular {
   width: 50%;
   flex-direction: column;
   align-items: end;
   display: flex;
 }
+
 #celular {
   height: 550px;
   overflow: hidden;
@@ -461,6 +487,7 @@ p {
 .aliados{
   max-width: 1144px;
 }
+
 .contenedor-alianzas {
   margin: 64px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
