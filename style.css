@@ -70,7 +70,6 @@ button {
 
 .propuesta-valor {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
@@ -237,10 +236,7 @@ p {
         flex-direction: row;
     }
 
-
-
     .imagen-celular {
-        width: 50%;
         flex-direction: column;
         align-items: end;
         display: flex;
@@ -314,7 +310,6 @@ p {
     }
 
     .imagen-celular {
-        width: 50%;
         flex-direction: column;
         align-items: end;
         display: flex;
@@ -401,6 +396,10 @@ p {
         cursor: pointer;
     }
 
+    .propuesta-valor {
+        justify-content: space-evenly;
+    }
+
     .contenidos-valor {
         width: 50%;
     }
@@ -446,16 +445,15 @@ p {
 
     .boton-comienza:hover {
         cursor: pointer;
-        text-decoration: underline;
         opacity: 0.75;
     }
 
     .boton-comienza > img {
-      transition: transform 0.25s ease;
+        transition: transform 0.25s ease;
     }
-    
+
     .boton-comienza:hover > img {
-      transform: translateX(4px);
+        transform: translateX(4px);
     }
 
     .boton-venta {
@@ -478,21 +476,18 @@ p {
 
     .boton-venta:hover {
         cursor: pointer;
-        text-decoration: underline;
         opacity: 0.75;
     }
 
     .boton-venta > img {
-      transition: transform 0.25s ease;
-    }
-    
-    .boton-venta:hover > img {
-      transform: translateX(4px);
+        transition: transform 0.25s ease;
     }
 
+    .boton-venta:hover > img {
+        transform: translateX(4px);
+    }
 
     .imagen-celular {
-        width: 50%;
         flex-direction: column;
         align-items: end;
         display: flex;
@@ -506,19 +501,22 @@ p {
     }
 
     .aliados {
-        max-width: 1144px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .contenedor-alianzas {
-        margin: 64px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         column-gap: 16px;
         row-gap: 32px;
         max-width: 1144px;
     }
+
     .contenedor-alianzas img {
         height: 60px;
         place-self: center;
+        width: auto;
     }
 }
