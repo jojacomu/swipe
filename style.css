@@ -66,6 +66,18 @@ button {
     left: -50%;
     z-index: -1;
     background: linear-gradient(#ef008f, #6ec3f4, #7038ff, #ffba27);
+    animation: gradient 1s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .propuesta-valor {
@@ -168,6 +180,101 @@ p {
     place-self: center;
 }
 
+.unified-platform {
+    background-color: #f7f9fc;
+    padding: 32px;
+    width: 100%;
+    background-color: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid;
+    margin-top: 32px;
+}
+
+.unified-platform > p {
+    color: #6962f7;
+    font-weight: 500;
+    font-family: "Anek Telugu", sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    width: 100%;
+}
+
+.contenedor-platform {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.p-platform {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.p-platform > p {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 16px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #6962f7;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.imgs-platform {
+    width: 100%;
+    max-width: 1144px;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:
+        "card slack slack"
+        "phone slack slack"
+        "phone dash dash";
+    grid-gap: 32px;
+    padding: 32px 0;
+    background-color: #f7f9fc;
+}
+
+#c-card {
+    grid-area: card;
+    width: 100%;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+#s-invoice {
+    grid-area: slack;
+    width: 100%;
+    box-shadow:  0px 2px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+#phone {
+    grid-area: phone;
+    width: 100%;
+
+}
+
+#dash {
+    grid-area: dash;
+    width: 100%;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
 /* Media Query para diferentes dispositivo */
 /*Pantallas entre 550px y 768px*/
 
@@ -254,6 +361,17 @@ p {
         grid-template-rows: 1fr 1fr;
     }
 }
+
+/* .p-platform {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+} */
+
 
 /*Pantallas entre 769px y 850px*/
 @media (769px <= width <= 850px) {
@@ -418,7 +536,6 @@ p {
         font-size: 18px;
         line-height: 26px;
         font-weight: 400;
-        margin: 16px;
     }
 
     .contenedor-botones {
