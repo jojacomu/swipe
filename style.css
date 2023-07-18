@@ -1,0 +1,522 @@
+/* Estilos generales Mobil First */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: black;
+    padding: 8px 0 0 0;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0 16px;
+}
+
+main {
+    margin: 32px 0 0 0;
+}
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1144px;
+    padding: 0 16px;
+    margin: 0 0 32px 0;
+}
+
+.navegacion ul,
+button {
+    display: none;
+}
+.menu-hamburguesa {
+    width: 50px;
+    height: 30px;
+    background-color: rgba(250, 250, 250, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-hamburguesa .barra {
+    background: #fff;
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    margin: 1px 0;
+}
+
+#fondo-principal {
+    width: 200%;
+    height: 970px;
+    transform: rotate(-10deg);
+    position: absolute;
+    top: -600px;
+    left: -50%;
+    z-index: -1;
+    background: linear-gradient(#ef008f, #6ec3f4, #7038ff, #ffba27);
+}
+
+.propuesta-valor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0 0 0 16px;
+}
+
+.contenidos-valor {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Anek Telugu", sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    margin: 0;
+    width: 100%;
+    letter-spacing: -1px;
+    line-height: 45px;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 16px 0;
+}
+
+.contenedor-botones {
+    display: flex;
+    margin: 16px 0;
+}
+
+.boton-comienza {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1.25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #0a2540;
+    transition: all 0.15s ease;
+}
+
+.boton-venta {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    color: #7000ff;
+    padding: 8px 16px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.imagen-celular {
+    display: none;
+}
+
+.aliados {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor-alianzas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 32px;
+    width: 100%;
+}
+
+.contenedor-alianzas img {
+    width: 100%;
+    height: auto;
+    place-self: center;
+}
+
+/* Media Query para diferentes dispositivo */
+/*Pantallas entre 550px y 768px*/
+
+@media (550px <= width <=768px) {
+    body {
+        padding: 16px 0 0 0;
+        display: grid;
+        width: 1349px;
+        position: absolute;
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 1144px;
+    }
+
+    .navegacion {
+        align-content: center;
+        margin: 8px 0px 32px 0px;
+    }
+
+    .barra {
+        background: #fff;
+        width: 18px;
+        height: 2px;
+        background-color: white;
+        margin: 1px 0;
+    }
+
+    #fondo-principal {
+        height: 970px;
+    }
+
+    .propuesta-valor {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: flex-start;
+    }
+    .contenidos-valor {
+        width: 50%;
+        padding: 20px;
+        justify-items: center;
+        font-size: medium;
+    }
+
+    h1 {
+        font-size: 90px;
+        letter-spacing: -2px;
+        line-height: 100px;
+    }
+
+    p {
+        margin-top: 16px;
+        font-size: 24px;
+        line-height: 34px;
+        max-width: 480px;
+    }
+
+    .contenedor-botones {
+        margin-top: 40px;
+    }
+
+    #boton-comienza {
+        margin: 10px;
+        flex-direction: row;
+    }
+
+    .imagen-celular {
+        flex-direction: column;
+        align-items: end;
+        display: flex;
+    }
+
+    #celular {
+        height: 550px;
+        overflow: hidden;
+        transition: 0.15s;
+    }
+
+    .contenedor-alianzas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/*Pantallas entre 769px y 850px*/
+@media (769px <= width <= 850px) {
+    .navegacion ul,
+    button {
+        display: flex;
+    }
+
+    .opciones-menu {
+        color: aliceblue;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opciones-menu a {
+        color: white;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 16px;
+        transition: all 0.15s ease;
+    }
+
+    .opciones-menu a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .boton-inicio {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        background-color: #0a2540;
+        color: #fff;
+        padding: 8px 16px;
+        transition: all 0.15s ease;
+        background: rgba(250, 250, 250, 0.25);
+    }
+
+    .boton-inicio:hover {
+        background-color: #210342;
+        cursor: pointer;
+    }
+
+    .imagen-celular {
+        flex-direction: column;
+        align-items: end;
+        display: flex;
+    }
+
+    #celular {
+        height: 550px;
+        overflow: hidden;
+        transition: 0.15s;
+    }
+
+    .contenedor-alianzas {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* Pantallas mayores a 851px */
+
+@media (851px <= width) {
+    body {
+        font-family: "Roboto", sans-serif;
+        color: black;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 8px 0 0 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .navegacion ul,
+    button {
+        display: flex;
+        margin: 0 0 64px 0;
+    }
+
+    .opciones-menu {
+        color: aliceblue;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opciones-menu a {
+        color: white;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 16px;
+        transition: all 0.15s ease;
+    }
+
+    .opciones-menu a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .menu-hamburguesa {
+        display: none;
+    }
+    .boton-inicio {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        background-color: #0a2540;
+        color: #fff;
+        padding: 8px 16px;
+        transition: all 0.15s ease;
+        background: rgba(250, 250, 250, 0.25);
+    }
+
+    .boton-inicio:hover {
+        background-color: #210342;
+        cursor: pointer;
+    }
+
+    .propuesta-valor {
+        justify-content: space-evenly;
+    }
+
+    .contenidos-valor {
+        width: 50%;
+    }
+
+    h1 {
+        font-family: "Anek Telugu", sans-serif;
+        font-weight: 600;
+        font-size: 94px;
+        margin: 0;
+        width: 100%;
+        letter-spacing: -1px;
+        line-height: 85px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+        margin: 16px;
+    }
+
+    .contenedor-botones {
+        align-items: center;
+    }
+
+    .boton-comienza {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        color: #ffffff;
+        padding: 8px 16px;
+        margin: 10px;
+        transition: all 0.15s ease;
+        background: #0a2540;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boton-comienza:hover {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+    .boton-comienza > img {
+        transition: transform 0.25s ease;
+    }
+
+    .boton-comienza:hover > img {
+        transform: translateX(4px);
+    }
+
+    .boton-venta {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        color: #7000ff;
+        padding: 8px 16px;
+        margin: 10px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    .boton-venta:hover {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+    .boton-venta > img {
+        transition: transform 0.25s ease;
+    }
+
+    .boton-venta:hover > img {
+        transform: translateX(4px);
+    }
+
+    .imagen-celular {
+        flex-direction: column;
+        align-items: end;
+        display: flex;
+    }
+
+    #celular {
+        height: 550px;
+        overflow: hidden;
+        transition: 0.15s;
+        transform: translateY(-60px);
+    }
+
+    .aliados {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor-alianzas {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 32px;
+        max-width: 1144px;
+    }
+
+    .contenedor-alianzas img {
+        height: 60px;
+        place-self: center;
+        width: auto;
+    }
+}
