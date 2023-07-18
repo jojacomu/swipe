@@ -5,31 +5,11 @@
     padding: 0;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    color: black;
-    padding: 8px 0 0 0;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0 16px;
-}
-
-main {
-    margin: 32px 0 0 0;
-}
 .navegacion {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 1144px;
     padding: 0 16px;
     margin: 0 0 32px 0;
 }
@@ -86,13 +66,12 @@ button {
     width: 100%;
     box-sizing: border-box;
     align-items: center;
-    padding: 0 0 0 16px;
 }
 
 .contenidos-valor {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 16px 0 0;
+    padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -185,10 +164,6 @@ p {
     padding: 32px;
     width: 100%;
     background-color: #f7f9fc;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: solid;
     margin-top: 32px;
 }
 
@@ -201,25 +176,21 @@ p {
     width: 100%;
 }
 
-.contenedor-platform {
-    flex-direction: column;
+h2 {
+    font-family: "Anek Talegu", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    margin: 0;
     width: 100%;
-    justify-content: center;
-    align-items: flex-start;
-    box-sizing: border-box;
 }
 
 .p-platform {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 16px 0 0;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
 }
 
 .p-platform > p {
+    display: block;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
@@ -235,7 +206,6 @@ a {
 
 .imgs-platform {
     width: 100%;
-    max-width: 1144px;
     display: flex;
     justify-content: center;
     display: grid;
@@ -274,20 +244,27 @@ a {
     border-radius: 20px;
 }
 
-/* Media Query para diferentes dispositivo */
-/*Pantallas entre 550px y 768px*/
+#fondo-secundario {
+    width: 200%;
+    height: 1100px;
+    transform: rotate(-10deg);
+    position: relative;
+    top: -32px;
+    left: -50%;
+    background: #0a2540;
+    transform: skewY(-11deg);
+    z-index: 1;
+}
 
-@media (550px <= width <=768px) {
+/* Media Query para diferentes dispositivo */
+/*Pantallas mayores a 550px*/
+
+@media (550px <= width) {
     body {
         padding: 16px 0 0 0;
         display: grid;
-        width: 1349px;
         position: absolute;
         overflow-x: hidden;
-    }
-
-    main {
-        width: 1144px;
     }
 
     .navegacion {
@@ -321,7 +298,7 @@ a {
     }
 
     h1 {
-        font-size: 90px;
+        font-size: 65px;
         letter-spacing: -2px;
         line-height: 100px;
     }
@@ -330,7 +307,6 @@ a {
         margin-top: 16px;
         font-size: 24px;
         line-height: 34px;
-        max-width: 480px;
     }
 
     .contenedor-botones {
@@ -358,21 +334,30 @@ a {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        margin-left: 70px;
+    }
+
+    .unified-platform {
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    .contenedor-platform {
+        width: 100%;
+    }
+
+    .p-platform {
+        width: 100%;
+        flex-direction: row;
+        gap: 60px;
+    }
+    .p-platform > p {
+        width: 100%;
     }
 }
 
-/* .p-platform {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 16px 0 0;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-} */
-
 /*Pantallas entre 769px y 850px*/
-@media (769px <= width <= 850px) {
+@media (769px <= width) {
     .navegacion ul,
     button {
         display: flex;
@@ -490,9 +475,7 @@ a {
         cursor: pointer;
         text-decoration: underline;
     }
-    .menu-hamburguesa {
-        display: none;
-    }
+
     .boton-inicio {
         font-family: "Roboto", sans-serif;
         font-size: 16px;
@@ -513,7 +496,7 @@ a {
     }
 
     .propuesta-valor {
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .contenidos-valor {
@@ -626,12 +609,16 @@ a {
         grid-template-rows: 1fr 1fr;
         column-gap: 16px;
         row-gap: 32px;
-        max-width: 1144px;
+        max-width: 2000px;
     }
 
     .contenedor-alianzas img {
         height: 60px;
         place-self: center;
         width: auto;
+    }
+
+    .unified-platform {
+        max-width: 2000px;
     }
 }
