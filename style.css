@@ -13,9 +13,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/* body, nav, main, div, p {
-    border: solid;
-} */
 .navegacion {
     display: flex;
     justify-content: space-between;
@@ -41,14 +38,6 @@ button {
     align-items: center;
 }
 
-/* .menu-hamburguesa .barra {
-    background: #fff;
-    width: 18px;
-    height: 2px;
-    background-color: white;
-    margin: 1px 0;
-} */
-
 .barra {
     background: #fff;
     width: 18px;
@@ -68,12 +57,6 @@ button {
     background: linear-gradient(#ef008f, #6ec3f4, #7038ff, #ffba27);
     animation: gradient 10s ease infinite;
 }
-
-/* @keyframes gradient {
-    0%{background-position: 0% 50%;}
-    50%{background-position: 100% 50%;}
-    100%{background-position: 0% 50%;}
-} */
 
 .propuesta-valor {
     display: flex;
@@ -102,7 +85,6 @@ h1 {
     width: 100%;
     letter-spacing: -1px;
     line-height: 55px;
-        /* max-width: 249px; */
 }
 
 p {
@@ -279,7 +261,6 @@ a {
     background-color: #0a2540;
     position: absolute;
     top: -32px;
-    /* left: 0; */
     z-index: -1;
     transform: skewY(-10deg);
 }
@@ -311,7 +292,6 @@ a {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px 0px 0px;
-    /*justify-content: center; */
 }
 
 .contIzq-d-enginer .boton-comienza {
@@ -344,12 +324,6 @@ h3 {
 .imgs-des-enginer {
     display: none;
 }
-/* .cont-designed-enginer{
-    position: absolute;
-} */
-
-/* Media Query para diferentes dispositivo */
-/*Pantallas mayores a 550px*/
 
 @media (550px <= width <767px) {
     body {
@@ -426,7 +400,6 @@ h3 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        /* margin-left: 70px; */
     }
 
     .unified-platform {
@@ -823,5 +796,4 @@ h3 {
     .cont-designed-enginer{
         padding-left: 64px;
     }
-
 }
