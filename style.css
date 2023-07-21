@@ -7,15 +7,23 @@
     font-family: "Anek Telugu", sans-serif;;
 }
 
+.subtitle {
+    color: #6962f7;
+    font-family: "Anek Telugu", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+}
+
 html, body {
     width: 100%;
     position: relative;
     overflow-x: hidden;
 }
 
-body, main, section, div, p {
+/* body, main, section, div, p {
     border: solid;
-}
+} */
 
 .navegacion {
     display: flex;
@@ -288,6 +296,7 @@ a {
     align-items: flex-start;
     box-sizing: border-box;
     padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .contIzq-d-enginer{
@@ -327,6 +336,10 @@ h3 {
 
 .imgs-des-enginer {
     display: none;
+}
+
+.why-swipe {
+    padding: 64px 0 16px 0 ;
 }
 
 @media (550px <= width <767px) {
@@ -541,6 +554,9 @@ h3 {
         width: 50%;
     }
     
+    .designed-enginer{
+        padding: 192px 0 192px 0;
+    }
     .cont-designed-enginer {
         width: 100%;
         display: flex;
@@ -794,10 +810,22 @@ h3 {
     }
 
     .designed-enginer::before {
-        height: 1200px;
+        height: 1100px;
     }
 
     .cont-designed-enginer{
         padding-left: 64px;
     }
+    
+    .why-swipe {
+        padding: 192px 0 192px 0;
+        width: 100%;
+        padding: calc(64px* 3) 0;
+    }
+    
+    .contentenedor-w-swipe {
+        padding: 16px;
+        max-width: 1144px;
+    }
+
 }
