@@ -21,9 +21,9 @@ html, body {
     overflow-x: hidden;
 }
 
-body, main, section, div, p {
+/* body, main, section, div, p {
     border: solid;
-}
+} */
 
 .navegacion {
     display: flex;
@@ -816,6 +816,7 @@ h3 {
 
     .cont-designed-enginer{
         padding-left: 64px;
+        gap: 60px;
     }
     
     .why-swipe {
