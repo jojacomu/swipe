@@ -7,6 +7,12 @@
     font-family: "Anek Telugu", sans-serif;;
 }
 
+html, body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
 .subtitle {
     color: #6962f7;
     font-family: "Anek Telugu", sans-serif;
