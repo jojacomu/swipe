@@ -20,6 +20,7 @@ html, body {
     width: 100%;
     padding: 0 16px;
     margin: 0 0 32px 0;
+    flex-direction: row;
 }
 
 .navegacion ul, button {
@@ -233,6 +234,7 @@ a {
     width: 100%;
     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    z-index: -1;
 }
 
 .designed-enginer {
@@ -272,7 +274,7 @@ a {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
     padding: 0 16px;
@@ -317,10 +319,11 @@ h3 {
     display: none;
 }
 
-@media (550px <= width <767px) {
+/* Pantallas superiores a 550px */
+
+@media (550px <= width) {
     body {
         padding: 16px 0 0 0;
-        display: grid;
         position: absolute;
         overflow-x: hidden;
     }
@@ -328,8 +331,10 @@ h3 {
     .navegacion {
         align-content: center;
         margin: 8px 0px 32px 0px;
-        align-items: flex-start;
-        max-width: 550px;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        width: 100%;
     }
 
     .menu-hamburguesa {
@@ -417,6 +422,18 @@ h3 {
 
     .imgs-platform {
         padding: 32px 32px 32px 0;
+        display: grid;
+        grid-template-areas:
+            "card slack slack"
+            "phone slack slack"
+            "phone dash dash";
+    }
+
+    #c-card {
+        grid-area: card;
+        width: 100%;
+        box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
     }
 
     .designed-enginer {
@@ -451,11 +468,11 @@ h3 {
     }
 }
 
-/*Pantallas mayores a  768px */
-@media (768px <= width) {
+/*Pantallas mayores a  769px */
+@media (769px <= width) {
     .navegacion ul, button {
         display: flex;
-        max-width: 762px;
+        /* width: 100%; */
     }
 
     .opciones-menu {
@@ -740,7 +757,7 @@ h3 {
 
     .imagen-celular {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         display: flex;
     }
 
@@ -788,5 +805,13 @@ h3 {
 
     .cont-designed-enginer{
         padding-left: 64px;
+    }
+
+    .imgs-des-enginer {
+        align-items: center;
+    }
+    
+    .contIzq-d-enginer {
+        width: 40%;
     }
 }
