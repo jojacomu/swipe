@@ -32,10 +32,10 @@ html, body {
     width: 100%;
     padding: 0 16px;
     margin: 0 0 32px 0;
+    flex-direction: row;
 }
 
-.navegacion ul,
-button {
+.navegacion ul, button {
     display: none;
 }
 
@@ -171,10 +171,8 @@ p {
 }
 
 .unified-platform {
-    background-color: #f7f9fc;
     padding: 32px;
     width: 100%;
-    background-color: #f7f9fc;
     margin-top: 32px;
 }
 
@@ -219,14 +217,9 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    display: grid;
-    grid-template-areas:
-        "card slack slack"
-        "phone slack slack"
-        "phone dash dash";
+    flex-direction: column;
     grid-gap: 32px;
     padding: 32px 0;
-    background-color: #f7f9fc;
 }
 
 #c-card {
@@ -253,6 +246,7 @@ a {
     width: 100%;
     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    z-index: -1;
 }
 
 .designed-enginer {
@@ -263,7 +257,7 @@ a {
     flex-direction: column;
     position: relative;
     padding: 32px 0;
-    z-index: 1;
+    z-index: -1;
 }
 
 .designed-enginer::before {
@@ -343,10 +337,9 @@ h3 {
     margin: 64px 0 0 0;
 }
 
-@media (550px <= width <767px) {
+@media (550px <= width) {
     body {
         padding: 16px 0 0 0;
-        display: grid;
         position: absolute;
         overflow-x: hidden;
     }
@@ -354,8 +347,10 @@ h3 {
     .navegacion {
         align-content: center;
         margin: 8px 0px 32px 0px;
-        align-items: flex-start;
-        max-width: 550px;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        width: 100%;
     }
 
     .menu-hamburguesa {
@@ -418,6 +413,7 @@ h3 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        margin-left: 70px;
     }
 
     .unified-platform {
@@ -442,6 +438,18 @@ h3 {
 
     .imgs-platform {
         padding: 32px 32px 32px 0;
+        display: grid;
+        grid-template-areas:
+            "card slack slack"
+            "phone slack slack"
+            "phone dash dash";
+    }
+
+    #c-card {
+        grid-area: card;
+        width: 100%;
+        box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
     }
 
     .designed-enginer {
@@ -476,11 +484,11 @@ h3 {
     }
 }
 
-/*Pantallas mayores a  768px */
-@media (768px <= width) {
+/*Pantallas mayores a  769px */
+@media (769px <= width) {
     .navegacion ul, button {
         display: flex;
-        max-width: 762px;
+        /* width: 100%; */
     }
 
     .opciones-menu {
@@ -768,7 +776,7 @@ h3 {
 
     .imagen-celular {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         display: flex;
     }
 
@@ -829,6 +837,14 @@ h3 {
     .contentenedor-w-swipe {
         padding: 16px;
         width: 100%;
+        gap: 64px;
     }
 
+    .imgs-des-enginer {
+        align-items: center;
+    }
+    
+    .contIzq-d-enginer {
+        width: 40%;
+    }
 }
