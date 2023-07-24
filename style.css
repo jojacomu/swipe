@@ -1,23 +1,32 @@
 /* Estilos generales Mobil First */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Anek Telugu", sans-serif;;
+}
+
+html, body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .navegacion {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     padding: 0 16px;
     margin: 0 0 32px 0;
+    flex-direction: row;
 }
 
-.navegacion ul,
-button {
+.navegacion ul, button {
     display: none;
 }
+
 .menu-hamburguesa {
     width: 50px;
     height: 30px;
@@ -29,7 +38,7 @@ button {
     align-items: center;
 }
 
-.menu-hamburguesa .barra {
+.barra {
     background: #fff;
     width: 18px;
     height: 2px;
@@ -37,27 +46,16 @@ button {
     margin: 1px 0;
 }
 
-#fondo-principal {
+.fondo-principal {
     width: 200%;
-    height: 970px;
+    height: 820px;
     transform: rotate(-10deg);
     position: absolute;
     top: -600px;
     left: -50%;
     z-index: -1;
     background: linear-gradient(#ef008f, #6ec3f4, #7038ff, #ffba27);
-    animation: gradient 1s ease infinite;
-}
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    animation: gradient 10s ease infinite;
 }
 
 .propuesta-valor {
@@ -66,6 +64,7 @@ button {
     width: 100%;
     box-sizing: border-box;
     align-items: center;
+    gap: 72px;
 }
 
 .contenidos-valor {
@@ -81,11 +80,11 @@ button {
 h1 {
     font-family: "Anek Telugu", sans-serif;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 47px;
     margin: 0;
     width: 100%;
     letter-spacing: -1px;
-    line-height: 45px;
+    line-height: 55px;
 }
 
 p {
@@ -162,7 +161,6 @@ p {
 .unified-platform {
     padding: 32px;
     width: 100%;
-    
     margin-top: 32px;
 }
 
@@ -212,6 +210,13 @@ a {
     padding: 32px 0;
 }
 
+#c-card {
+    grid-area: card;
+    width: 100%;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
 #s-invoice {
     grid-area: slack;
     width: 100%;
@@ -229,27 +234,96 @@ a {
     width: 100%;
     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-}
-
-#fondo-secundario {
-    width: 200%;
-    height: 1100px;
-    transform: rotate(-10deg);
-    position: relative;
-    top: -32px;
-    left: -50%;
-    background: #0a2540;
-    transform: skewY(-11deg);
     z-index: -1;
 }
 
-/* Media Query para diferentes dispositivo */
-/*Pantallas mayores a 550px*/
+.designed-enginer {
+    color:#fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 32px 0;
+    z-index: -1;
+}
+
+.designed-enginer::before {
+    content: "";
+    width: 100%;
+    height: 1050px;
+    background-color: #0a2540;
+    position: absolute;
+    top: -32px;
+    z-index: -1;
+    transform: skewY(-10deg);
+}
+
+.designed-enginer::after {
+    content: "";
+    background-color: #f7f9fc;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.cont-designed-enginer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+.contIzq-d-enginer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 0px;
+}
+
+.contIzq-d-enginer .boton-comienza {
+    background-color: #00d4ff;
+    color: #0a2540;
+    margin: 16px 0 0 0;
+}
+
+.dcards-desg-engineers {
+    margin: 32px 0;
+}
+
+.icon {
+    height: 50px;
+    margin: 0 0 8px 0;
+}
+
+h3 {
+    font-family: "Anek Telugu", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    width: 100%;
+}
+
+.dcards-desg-engineers .boton-venta{
+    color: #00d4ff;
+}
+
+.imgs-des-enginer {
+    display: none;
+}
+
+/* Pantallas superiores a 550px */
 
 @media (550px <= width) {
     body {
         padding: 16px 0 0 0;
-        display: grid;
         position: absolute;
         overflow-x: hidden;
     }
@@ -257,14 +331,14 @@ a {
     .navegacion {
         align-content: center;
         margin: 8px 0px 32px 0px;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        width: 100%;
     }
 
-    .barra {
-        background: #fff;
-        width: 18px;
-        height: 2px;
-        background-color: white;
-        margin: 1px 0;
+    .menu-hamburguesa {
+        display: flex;
     }
 
     #fondo-principal {
@@ -279,7 +353,7 @@ a {
         padding: 30px;
     }
     .contenidos-valor {
-        width: 50%;
+        width: 60%;
         padding: 20px;
         justify-items: center;
         font-size: medium;
@@ -308,8 +382,9 @@ a {
 
     .imagen-celular {
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         display: flex;
+        width: 40%;
     }
 
     #celular {
@@ -327,7 +402,7 @@ a {
 
     .unified-platform {
         width: 100%;
-        margin-left: 40px;
+        padding: 32px 0 0 72px;
     }
 
     .contenedor-platform {
@@ -338,34 +413,66 @@ a {
         width: 100%;
         flex-direction: row;
         gap: 60px;
+        padding: 0 32px 0 0;
     }
+    
     .p-platform > p {
-        width: 100%;
+        width: 50%;
     }
 
-    .imgs-platform-grid {
+    .imgs-platform {
+        padding: 32px 32px 32px 0;
         display: grid;
         grid-template-areas:
             "card slack slack"
             "phone slack slack"
             "phone dash dash";
     }
-    
+
     #c-card {
         grid-area: card;
         width: 100%;
         box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
     }
-    
 
+    .designed-enginer {
+        padding: 124px 0;
+    }
+
+    .cont-designed-enginer {
+        padding: 0px 16px 0px 56px;
+    }
+
+    .contIzq-d-enginer {
+        width: 60%;
+        padding: 16px;
+    }
+
+    .img-des-enginer {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 16px;
+    
+    }
+    
+    .img-d-enginer {
+        border-radius: 20px;
+        padding: 16px;
+    }
+
+    .img-d-enginer {
+        border-radius: 35px;
+        padding: 16px;
+    }
 }
 
-/*Pantallas entre 769px y 850px*/
+/*Pantallas mayores a  769px */
 @media (769px <= width) {
-    .navegacion ul,
-    button {
+    .navegacion ul, button {
         display: flex;
+        /* width: 100%; */
     }
 
     .opciones-menu {
@@ -430,11 +537,63 @@ a {
     .contenedor-alianzas {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    
+    .p-platform {
+        flex-direction: row;
+        gap: 40px;
+    } 
+
+    .p-platform > p {
+        width: 50%;
+    }
+    
+    .cont-designed-enginer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .contIzq-d-enginer {
+        box-sizing: border-box;
+        padding: 0 var(--spacing-md) 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .dcards-desg-engineers {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .imgs-des-enginer {
+        display: flex;
+        width: 40%;
+        box-sizing: border-box;
+        padding: 0 0 0 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .img-d-enginer {
+        max-width: 470px;
+        margin: 0 0 16px 0;
+        border-radius: 20px;
+    }
 }
 
-/* Pantallas mayores a 851px */
+/* Pantallas mayores a 850px */
 
-@media (851px <= width) {
+@media (850px <= width) {
+
     body {
         font-family: "Roboto", sans-serif;
         color: black;
@@ -449,6 +608,12 @@ a {
         width: 100%;
         position: relative;
         overflow-x: hidden;
+        flex-wrap: wrap;
+    }
+
+    .navegacion {
+        justify-content:space-evenly;
+        align-items: flex-start;
     }
 
     .navegacion ul,
@@ -501,7 +666,7 @@ a {
     }
 
     .propuesta-valor {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .contenidos-valor {
@@ -592,7 +757,7 @@ a {
 
     .imagen-celular {
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         display: flex;
     }
 
@@ -622,8 +787,32 @@ a {
         place-self: center;
         width: auto;
     }
+    .aliados{
+        justify-content: flex-start
+    }
 
     .unified-platform {
         max-width: 2000px;
+    }
+
+    .designed-enginer {
+        padding: calc(64px * 3) 0;
+    }
+
+    .designed-enginer::before {
+        height: 1200px;
+    }
+
+    .cont-designed-enginer{
+        padding-left: 64px;
+        gap: 64px;
+    }
+
+    .imgs-des-enginer {
+        align-items: center;
+    }
+    
+    .contIzq-d-enginer {
+        width: 40%;
     }
 }
