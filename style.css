@@ -158,10 +158,8 @@ p {
 }
 
 .unified-platform {
-    background-color: #f7f9fc;
     padding: 32px;
     width: 100%;
-    background-color: #f7f9fc;
     margin-top: 32px;
 }
 
@@ -206,14 +204,9 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    display: grid;
-    grid-template-areas:
-        "card slack slack"
-        "phone slack slack"
-        "phone dash dash";
+    flex-direction: column;
     grid-gap: 32px;
     padding: 32px 0;
-    background-color: #f7f9fc;
 }
 
 #c-card {
@@ -250,7 +243,7 @@ a {
     flex-direction: column;
     position: relative;
     padding: 32px 0;
-    z-index: 1;
+    z-index: -1;
 }
 
 .designed-enginer::before {
