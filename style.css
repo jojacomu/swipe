@@ -10,6 +10,7 @@
 html, body {
     width: 100%;
     position: relative;
+    margin: auto;
     overflow-x: hidden;
     max-width: 1440px;
 }
@@ -20,12 +21,6 @@ html, body {
     font-weight: 500;
     font-size: 17px;
     line-height: 26px;
-}
-
-html, body {
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
 }
 
 .navegacion {
