@@ -1,10 +1,25 @@
 /* Estilos generales Mobil First */
 
 * {
+    font-family: "Anek Telugu", sans-serif;;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Anek Telugu", sans-serif;;
+}
+
+html, body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 1440px;
+}
+
+.subtitle {
+    color: #6962f7;
+    font-family: "Anek Telugu", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
 }
 
 html, body {
@@ -16,11 +31,11 @@ html, body {
 .navegacion {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;    
     align-items: center;
     width: 100%;
     padding: 0 16px;
     margin: 0 0 32px 0;
-    flex-direction: row;
 }
 
 .navegacion ul, button {
@@ -251,7 +266,7 @@ a {
 .designed-enginer::before {
     content: "";
     width: 100%;
-    height: 1050px;
+    height: 1100px;
     background-color: #0a2540;
     position: absolute;
     top: -32px;
@@ -273,11 +288,20 @@ a {
 .cont-designed-enginer {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
     padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.subtitle2 {
+    color: #00d4ff;
+    font-family: "Anek Telugu", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
 }
 
 .contIzq-d-enginer{
@@ -315,11 +339,41 @@ h3 {
     color: #00d4ff;
 }
 
+.dcards {
+    width: 100%
+}
+
 .imgs-des-enginer {
     display: none;
 }
 
-/* Pantallas superiores a 550px */
+.why-swipe {
+    width: 100%;
+    padding: 64px 0 16px 16px;
+    margin: 64px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-w-swipe {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.dcards-w-swipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px 0;
+}
+
+.dcard-swipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Patallas superiores a 550px */
 
 @media (550px <= width) {
     body {
@@ -360,9 +414,10 @@ h3 {
     }
 
     h1 {
-        font-size: 65px;
-        letter-spacing: -2px;
+        font-size: 50px;
+        letter-spacing: 1px;
         line-height: 100px;
+        line-height: 53px;
     }
 
     p {
@@ -397,12 +452,11 @@ h3 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        margin-left: 70px;
+        margin-left: 32px;
     }
 
     .unified-platform {
         width: 100%;
-        padding: 32px 0 0 72px;
     }
 
     .contenedor-platform {
@@ -418,6 +472,8 @@ h3 {
     
     .p-platform > p {
         width: 50%;
+        font-size: 15px;
+        line-height: 20px;
     }
 
     .imgs-platform {
@@ -441,38 +497,70 @@ h3 {
     }
 
     .cont-designed-enginer {
-        padding: 0px 16px 0px 56px;
+        padding: 0 16px 0 32px;
+        width: 100%;
+        flex-direction: row;
     }
 
     .contIzq-d-enginer {
         width: 60%;
-        padding: 16px;
+        padding: 0 16px 0 0;
     }
 
-    .img-des-enginer {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    padding: 16px;
-    
+    .p-tirdth-desg-engineers {
+        font-size: 14px;
+        line-height: 18px;
+        color: #adbdcc;
+        letter-spacing: 0.25px;
     }
-    
+
+    .dcards-desg-engineers {
+        margin: 32px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .imgs-des-enginer {
+        display: flex;
+        width: 40%;
+        box-sizing: border-box;
+        padding: 0 0 0 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
     .img-d-enginer {
         border-radius: 20px;
         padding: 16px;
+        max-width: 470px;
     }
 
     .img-d-enginer {
         border-radius: 35px;
         padding: 16px;
     }
+    
+    .why-swipe {
+        padding:  0 16px 16px;
+        margin: 0;
+    }
+
+    .contenedor-w-swipe {
+        padding-left: 32px;
+    }
+
+    .dcard-swipe {
+        width: 50%;
+        padding: 0 0 0 10px;
+    }
 }
 
-/*Pantallas mayores a  769px */
-@media (769px <= width) {
+/*Pantallas mayores a  768px */
+
+@media (768px <= width) {
     .navegacion ul, button {
         display: flex;
-        /* width: 100%; */
     }
 
     .opciones-menu {
@@ -547,11 +635,14 @@ h3 {
         width: 50%;
     }
     
+    .designed-enginer{
+        padding: 192px 0 192px 0;
+    }
     .cont-designed-enginer {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         box-sizing: border-box;
     }
@@ -587,6 +678,29 @@ h3 {
         max-width: 470px;
         margin: 0 0 16px 0;
         border-radius: 20px;
+    }
+
+    .why-swipe {
+        padding: 16px 0 64px 0;
+    }
+
+    .contentenedor-w-swipe {
+        display: flex;
+    }
+
+
+    .dcards-w-swipe {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dcard-swipe{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contenedor-global-scale {
+        padding: 0 32px 0 32px;
     }
 }
 
@@ -796,23 +910,40 @@ h3 {
     }
 
     .designed-enginer {
-        padding: calc(64px * 3) 0;
+        padding: 192px 0;
     }
 
     .designed-enginer::before {
-        height: 1200px;
+        height: 1100px;
     }
 
     .cont-designed-enginer{
-        padding-left: 64px;
-        gap: 64px;
+        padding: 0;
+        gap: 60px;
     }
-
+    
     .imgs-des-enginer {
         align-items: center;
     }
     
     .contIzq-d-enginer {
         width: 40%;
+    }
+
+    .why-swipe {
+        padding: 100px 0 100px 0;
+        width: 100%;
+    }
+    
+    .contentenedor-w-swipe {
+        padding: 16px;
+        width: 100%;
+        gap: 64px;
+        height: 700px;
+    }
+
+    .dcards-w-swipe {
+        flex-wrap: nowrap;
+        margin-right: 16px;
     }
 }
