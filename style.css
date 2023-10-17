@@ -447,6 +447,7 @@ h3 {
     display: flex;
     justify-content: center;
     position: relative;
+    margin: 0 30px 0 30px;
 }
 
 /* .virtual-events::before {
@@ -466,10 +467,11 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
+    gap: 40px;
 }
 .contenedor-top-ve {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     position: relative;
     align-items: center;
     width: 100%;
@@ -478,17 +480,18 @@ h3 {
 .contenedor-top-ve-left {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 .card-sesion-v {
+    display: flex;
     position: relative;
     height: 446px;
     box-shadow: 2px 40px rgba(0, 0, 0, 0.15);
     margin: 32px 32px 32px 16px;
-    width: 288px;
+    width: 50%;
     box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     overflow: hidden;
-    display: flex;
     }
 
 .fondo-v-events {
@@ -537,7 +540,11 @@ h3 {
 .subtitle-keynote,
 .p-keynote,
 #sessions-logo {
-    padding: 0 0 0 10px;
+    padding: 10px;
+}
+
+.p-keynote {
+    padding: 10px;
 }
 
 .contenedor-top-ve > .subtitle {
@@ -556,7 +563,20 @@ h3 {
 }
 
 .contenedor-bottom-ve {
-    margin: 64px 0 0 16px;
+    display: flex;
+    margin: 32px 0 0 0;
+    gap: 20px;
+}
+
+.contenedor-bottom-ve-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contenedor-bottom-ve-right{
+    display: flex;
+    width: 50%;
 }
 /* .contenedor-v-events::before {
     content: "";
@@ -811,17 +831,8 @@ h3 {
 }
 
 .card-sesion-v {
-    position: relative;
-    height: 446px;
-    box-shadow: 2px 40px rgba(0, 0, 0, 0.15);
-    margin: 32px 32px 32px 16px;
-    width: 288px;
-    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
+    /* flex-wrap: wrap; */
     /* width: 50%; */
     }
 
@@ -829,10 +840,6 @@ h3 {
     flex-direction: row;
     width: 100%;
 } */
-
-.contenedor-top-ve-left {
-    /* width: 50%; */
-}
 
 /*Pantallas mayores a  768px */
 
