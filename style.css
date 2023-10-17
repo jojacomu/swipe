@@ -196,7 +196,7 @@ h2 {
     font-weight: 600;
     font-size: 34px;
     margin: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .p-platform {
@@ -332,7 +332,7 @@ a {
 
 h3 {
     font-family: "Anek Telugu", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     margin: 0;
     width: 100%;
@@ -447,7 +447,7 @@ h3 {
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 0 30px 0 30px;
+    margin: 0 16px 0 16px;
 }
 
 /* .virtual-events::before {
@@ -465,34 +465,27 @@ h3 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-    gap: 40px;
 }
 .contenedor-top-ve {
     display: flex;
     justify-content: center;
-    position: relative;
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 90px;
 }
 
 .contenedor-top-ve-left {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
 }
+
 .card-sesion-v {
-    display: flex;
-    position: relative;
-    height: 446px;
-    box-shadow: 2px 40px rgba(0, 0, 0, 0.15);
-    margin: 32px 32px 32px 16px;
-    width: 50%;
-    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    overflow: hidden;
-    }
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
 .fondo-v-events {
     background: linear-gradient(
@@ -517,6 +510,7 @@ h3 {
     left: 64px;
     z-index: 3;
 }
+
 /* .contenedor-top-ve .card-sesion-v::before {
         background: linear-gradient( 101.33deg, #08209a 0.76%, #6563ff 33.33%, #36c5f0 76.92%, #83e2ff 96.96% );
         content: "";
@@ -564,19 +558,17 @@ h3 {
 
 .contenedor-bottom-ve {
     display: flex;
-    margin: 32px 0 0 0;
-    gap: 20px;
+    flex-direction: column;
 }
 
-.contenedor-bottom-ve-left{
+.contenedor-bottom-ve-left {
     display: flex;
     flex-direction: column;
-    width: 50%;
 }
 
-.contenedor-bottom-ve-right{
+.contenedor-bottom-ve-right {
     display: flex;
-    width: 50%;
+    flex-direction: column;
 }
 /* .contenedor-v-events::before {
     content: "";
@@ -591,19 +583,30 @@ h3 {
 .footerswipe {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
 }
-.footerswipe > div > ul {
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-container > div > ul {
     list-style-type: none;
 }
 
 .logoSwipeblack {
     width: 70px;
 }
+.column{
+    width: 50%;
+    padding: 16px;
+}
 
 /* Patallas superiores a 550px */
 
-@media (550px <= width) {
+@media all and (min-width: 550px) {
     body {
         padding: 16px 0 0 0;
         position: absolute;
@@ -828,22 +831,56 @@ h3 {
         display: flex;
         flex-direction: column;
     }
-}
 
-.card-sesion-v {
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* width: 50%; */
+    .contenedor-top-ve {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        align-items: flex-start;
+        box-sizing: border-box;
+        gap: 40px;
     }
 
-/* .contenedor-top-ve {
-    flex-direction: row;
-    width: 100%;
-} */
+    .contenedor-top-ve-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .card-sesion-v {
+        display: flex;
+        position: relative;
+        height: 446px;
+        box-shadow: 2px 40px rgba(0, 0, 0, 0.15);
+        margin: 32px 32px 32px 16px;
+        width: 50%;
+        box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .contenedor-bottom-ve {
+        display: flex;
+        flex-direction: row;
+        margin: 32px 0 0 0;
+        gap: 20px;
+    }
+
+    .contenedor-bottom-ve-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .contenedor-bottom-ve-right {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+}
 
 /*Pantallas mayores a  768px */
 
-@media (768px <= width) {
+@media (min-width: 768px) {
     .navegacion ul,
     button {
         display: flex;
@@ -998,7 +1035,7 @@ h3 {
 
 /* Pantallas mayores a 850px */
 
-@media (850px <= width) {
+@media all and (min-width: 850px) {
     body {
         font-family: "Roboto", sans-serif;
         color: black;
